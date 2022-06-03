@@ -1,0 +1,17 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block contenido %}
+
+<form action="entrenadores" method="POST">
+  {% csrf_token %}
+  <p>Nombre de Entrenador:</p>
+  <input type="text" name="nombre">
+  <p>Año de Nacimiento:</p>
+  <input type="number" name="nacimiento">
+
+  <input type="submit" value="Registrar">
+</form>
+
+{% endblock %}
